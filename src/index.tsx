@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-serviceWorker.unregister()
+export default function App(): JSX.Element {
+  const sum = (a: number, b: number) => a + b
+  return <h1>Hello {sum(15, 15)}</h1>
+}
+
+const root = document.getElementById('root')
+ReactDOM.render(<App />, root)
